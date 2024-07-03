@@ -2,5 +2,8 @@
 number =int(input("Enter a number to see its multiplication table"))
 
 #generate and print the multiplication table
-for i in range(1, 11):
-  print(f"{number}*{i} ={number *i}")
+for X in range(1, 11):
+  print(X)
+for Y in range(1, 11):
+  print(number, "x", Y, "=", number * Y)
+  #X *Y = Z
