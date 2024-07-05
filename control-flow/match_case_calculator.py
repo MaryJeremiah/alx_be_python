@@ -1,20 +1,35 @@
-num1 = float(input("Enter the first number: "))
-num2 =float(input("Enter the second number: "))
-operation = input("choose the operation (+, -, *, /):")
 
-#calculation using match_case
-result = num1 + num2
-print(f"The result is {result}")
+def get_number(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
 
-result = num1 - num2
-print(f"The result is {result}")
+# Prompt the user to enter two numbers
+num1 = get_number("Enter the first number: ")
+num2 = get_number("Enter the second number: ")
 
-result = num1 * num2
-print(f"The result is {result}")
+# Prompt the user to select an operation
+operation = input("Choose the operation (+, -, *, /): ")
 
-result = num1 / num2
-result(f"The result is {result}")
-
-print("Invalid operation.Please choose from +, -, *, / ")
-print("Invalid input. Please enter numeric values for numbers.")
+# Perform the calculation using match case
+match operation:
+    case "+":
+        result = num1 + num2
+        print(f"The result is {result}.")
+    case "-":
+        result = num1 - num2
+        print(f"The result is {result}.")
+    case "*":
+        result = num1 * num2
+        print(f"The result is {result}.")
+    case "/":
+        if num2 != 0:
+            result = num1 / num2
+            print(f"The result is {result}.")
+        else:
+            print("Cannot divide by zero.")
+    case _:
+        print("Invalid operation selected.")
 
