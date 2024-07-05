@@ -1,35 +1,24 @@
-
-def get_number(prompt):
-    while True:
-        try:
-            return float(input(prompt))
-        except ValueError:
-            print("Invalid input. Please enter a valid number.")
-
-# Prompt the user to enter two numbers
-num1 = get_number("Enter the first number: ")
-num2 = get_number("Enter the second number: ")
-
-# Prompt the user to select an operation
+# Prompt user for input
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
 operation = input("Choose the operation (+, -, *, /): ")
 
-# Perform the calculation using match case
+    # Perform the calculation using match case
 match operation:
-    case "+":
-        result = num1 + num2
-        print(f"The result is {result}.")
-    case "-":
-        result = num1 - num2
-        print(f"The result is {result}.")
-    case "*":
-        result = num1 * num2
-        print(f"The result is {result}.")
-    case "/":
-        if num2 != 0:
-            result = num1 / num2
+        case '+':
+            result = num1 + num2
             print(f"The result is {result}.")
-        else:
-            print("Cannot divide by zero.")
-    case _:
-        print("Invalid operation selected.")
-
+        case '-':
+            result = num1 - num2
+            print(f"The result is {result}.")
+        case '*':
+            result = num1 * num2
+            print(f"The result is {result}.")
+        case '/':
+            if num2 != 0:
+                result = num1 / num2
+                print(f"The result is {result}.")
+            else:
+                print("Cannot divide by zero.")
+        case _:
+            print("Invalid operation. Please choose from +, -, *, /.")
