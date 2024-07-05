@@ -1,19 +1,16 @@
-#prompt the user for the size of the pattern
-size =int(input("Enter the size of the pattern: "))
 
-#Ensure the size is a  positive integer
-if size <= 0:
-    print("Please enter a positive integer.")
+# Prompt the user to enter the size of the pattern
+size = int(input("Enter the size of the pattern: "))
 
-#Initialize the row
-Row = 0
+# Initialize the row counter
+row = 0
 
-
-
-# Use a for loop to print asterisks in each row
-for _ in range(size):
-    print("*", end="")
-# Move to the next line after printing each row
+# Use a while loop to iterate through each row
+while row < size:
+    # Use a for loop to print asterisks in each column of the current row
+    for col in range(size):
+        print("*", end="")
+    # Print a newline character to move to the next row
     print()
-# Increment the row counter
-    Row += 1
+    # Move to the next row
+    row += 1
