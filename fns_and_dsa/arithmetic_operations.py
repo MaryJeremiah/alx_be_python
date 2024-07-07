@@ -5,3 +5,5 @@ def main():
     operation = input("Enter operation (add, subtract, multiply, divide): ").strip().lower()
     result = 'perform_operations'(num1, num2, operation)
     print(f"Result: {result}")
+if __name__ == "__main__":
+    main()
