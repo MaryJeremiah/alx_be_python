@@ -1,9 +1,11 @@
-def main():
-    print("Arithmetic Operations")
-    num1 = float(input("Enter first number: "))
-    num2 = float(input("Enter second number: "))
-    operation = input("Enter operation (add, subtract, multiply, divide): ").strip().lower()
-    result = 'perform_operations'(num1, num2, operation)
-    print(f"Result: {result}")
-if __name__ == "__main__":
-    main()
+def perform_operation(num1, num2, operation):
+  if operation == 'add':
+    result = num1 + num2
+  elif operation == 'subtract':
+    result = num1 - num2
+  elif operation == 'multiply':
+    result = num1 * num2
+  elif operation == 'divide':
+    result = num1 / num2
+  else:print("not a valid input")
+  result = result
